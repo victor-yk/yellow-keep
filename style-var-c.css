@@ -1,0 +1,89 @@
+/* Variation C: Terlingua */
+@font-face { font-family: 'Terlingua'; src: url('fonts/Terlingua.otf') format('opentype'); font-display: swap; }
+:root { --bg: #FDFBF7; --bg-alt: #F5F0E8; --bg-card: #F8F4ED; --text: #5C4F3D; --text-body: #6B5F4F; --text-muted: #8A7D6B; --text-faint: #C0BAB0; --accent: #C49A22; --accent-strong: #B08818; --accent-dim: #C49A2233; --accent-soft: #C49A2212; --secondary: #B56E34; --secondary-dim: #B56E3433; --mono: "SF Mono", "Fira Code", "Cascadia Code", "JetBrains Mono", Consolas, monospace; --serif: Georgia, "Times New Roman", serif; --display: 'Terlingua', Georgia, serif; --heading: Georgia, "Times New Roman", serif; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 17px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { background: var(--bg); color: var(--text); font-family: var(--serif); line-height: 1.7; min-height: 100vh; overflow-x: hidden; }
+body::after { content: ''; position: fixed; inset: 0; opacity: 0.04; pointer-events: none; z-index: 9999; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-repeat: repeat; background-size: 256px 256px; }
+main { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+::selection { background: var(--accent); color: var(--bg); }
+.motif { font-family: var(--serif); }
+.nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; gap: 16px; padding: 20px 48px; background: var(--bg); border-bottom: 1px solid var(--accent-dim); font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.nav-motif { color: var(--accent); font-size: 0.9rem; opacity: 0.4; }
+.nav-role { color: var(--accent); }
+.nav-sep { color: var(--text-faint); font-size: 0.5rem; }
+.nav-center { margin-left: auto; margin-right: auto; }
+.nav-sigil { font-family: var(--mono); font-size: 8px; line-height: 1.2; color: var(--accent); opacity: 0.5; margin: 0; }
+.nav-link { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.nav-link:hover { color: var(--accent); }
+.hero { padding: 80px 0 60px; }
+.hero-ascii-top pre, .hero-ascii-bottom pre { font-family: var(--mono); font-size: 9px; color: var(--accent); opacity: 0.2; line-height: 1; margin: 0; overflow: hidden; white-space: nowrap; }
+.hero-content { padding: 64px 0; }
+.name { font-family: var(--display); font-size: clamp(4rem, 12vw, 9rem); font-weight: normal; line-height: 1.0; color: var(--text); display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 32px; }
+.name-star { font-family: var(--serif); color: var(--accent); font-size: 0.35em; position: relative; top: -0.1em; }
+.hero-tagline { margin-top: 48px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.tagline { font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.5rem); line-height: 1.5; color: var(--text-body); max-width: 500px; }
+.hero-meta { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.meta-item { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); display: flex; align-items: center; gap: 6px; }
+.meta-motif { color: var(--secondary); font-size: 0.7rem; opacity: 0.5; }
+.section-title-wrap { padding: 80px 0 48px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 16px; }
+.section-title { font-family: var(--display); font-size: clamp(3rem, 10vw, 7rem); font-weight: normal; line-height: 1.0; color: var(--text); }
+.section-title-motif-before { color: var(--secondary); font-size: clamp(1.8rem, 5vw, 3.5rem); opacity: 0.5; }
+.section-title-ascii { font-family: var(--mono); font-size: 10px; color: var(--accent); opacity: 0.2; margin: 0; flex-basis: 100%; }
+.about { padding-bottom: 40px; }
+.about-content { max-width: 720px; margin-bottom: 64px; }
+.about-lead { font-family: var(--serif); font-size: clamp(1.15rem, 2.5vw, 1.45rem); line-height: 1.75; color: var(--text-body); margin-bottom: 20px; }
+.about-lead strong { color: var(--accent); font-weight: normal; font-style: italic; }
+.about-body { font-family: var(--serif); font-size: 1rem; line-height: 1.8; color: var(--text-muted); }
+.domains { margin-bottom: 16px; }
+.domains-border { font-family: var(--mono); font-size: 10px; color: var(--text-faint); line-height: 1; margin: 0; overflow: hidden; }
+.domain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; padding: 0; }
+.domain-card { padding: 32px 24px; border: 1px solid var(--accent-dim); position: relative; transition: background 0.3s ease; }
+.domain-card:hover { background: var(--bg-card); }
+.domain-card:nth-child(1) { border-right: none; border-bottom: none; }
+.domain-card:nth-child(2) { border-bottom: none; }
+.domain-card:nth-child(3) { border-right: none; }
+.domain-motif { position: absolute; top: 16px; right: 20px; font-size: 1.8rem; color: var(--accent); opacity: 0.12; }
+.domain-marker { font-family: var(--mono); font-size: 0.58rem; color: var(--secondary); opacity: 0.7; letter-spacing: 0.1em; display: block; margin-bottom: 12px; }
+.domain-name { font-family: var(--heading); font-size: 0.88rem; font-weight: normal; letter-spacing: 0.02em; color: var(--text); line-height: 1.4; margin-bottom: 10px; }
+.domain-desc { font-family: var(--mono); font-size: 0.6rem; line-height: 1.6; color: var(--text-muted); letter-spacing: 0.02em; }
+.philosophy { padding: 64px 0; background: var(--bg-alt); margin: 0 -48px; padding-left: 48px; padding-right: 48px; }
+.philosophy-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+.philosophy-motifs { display: flex; justify-content: center; gap: 24px; }
+.philosophy-motifs .motif { font-size: 1.6rem; color: var(--accent); opacity: 0.35; }
+.philosophy-quote { padding: 40px 0; max-width: 600px; margin: 0 auto; }
+.philosophy-quote p { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.6rem); line-height: 1.6; color: var(--text-body); margin-bottom: 16px; }
+.philosophy-quote p:last-child { margin-bottom: 0; }
+.philosophy-quote em { color: var(--secondary); font-style: italic; }
+.approach { padding: 48px 0; }
+.approach-cols { display: flex; flex-wrap: wrap; gap: 12px 40px; }
+.approach-item { display: flex; align-items: baseline; gap: 10px; }
+.approach-motif { font-size: 0.85rem; color: var(--accent); opacity: 0.6; }
+.approach-text { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.03em; }
+.contact { padding-bottom: 40px; }
+.contact-content { display: flex; align-items: center; flex-wrap: wrap; gap: 32px; }
+.contact-intro { font-family: var(--serif); font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--text-body); display: flex; align-items: center; gap: 10px; }
+.contact-motif { color: var(--accent); font-size: 1.3rem; opacity: 0.4; }
+.contact-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.contact-btn { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--accent); padding: 14px 28px; border: 1px solid var(--accent-dim); border-radius: 40px; transition: all 0.3s ease; white-space: nowrap; }
+.contact-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.footer { padding: 80px 0 48px; }
+.footer-line { font-family: var(--mono); font-size: 10px; color: var(--text-faint); opacity: 0.3; line-height: 1; margin: 0 0 24px; overflow: hidden; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; }
+.footer-left { display: flex; align-items: center; gap: 10px; }
+.footer-motif { color: var(--secondary); font-size: 1rem; opacity: 0.5; }
+.footer-company { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-faint); }
+.footer-right { display: flex; align-items: center; gap: 10px; }
+.footer-year { font-family: var(--mono); font-size: 0.62rem; color: var(--text-faint); }
+@media (max-width: 768px) { main { padding: 0 24px; } .nav { padding: 16px 24px; gap: 10px; } .nav-sep, .nav-center { display: none; } .hero { padding: 48px 0 40px; } .hero-content { padding: 40px 0; } .name { flex-direction: column; gap: 0; } .name-star { display: none; } .hero-tagline { flex-direction: column; align-items: flex-start; } .hero-meta { align-items: flex-start; } .section-title-wrap { flex-direction: column; gap: 8px; } .domain-grid { grid-template-columns: 1fr; } .domain-card { border-right: 1px solid var(--accent-dim) !important; border-bottom: none !important; } .domain-card:last-child { border-bottom: 1px solid var(--accent-dim) !important; } .philosophy { margin: 0 -24px; padding-left: 24px; padding-right: 24px; } .approach-cols { flex-direction: column; gap: 10px; } .contact-content { flex-direction: column; align-items: flex-start; } .contact-links { flex-direction: column; width: 100%; } .contact-btn { text-align: center; } .hero-ascii-top, .hero-ascii-bottom { display: none; } }
+@media (max-width: 480px) { .section-title { font-size: 2.8rem; } .about-lead { font-size: 1.05rem; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.nav { animation: fadeIn 0.6s ease-out both; }
+.hero { animation: fadeUp 1s ease-out 0.1s both; }
+.about { animation: fadeUp 0.8s ease-out 0.2s both; }
+.philosophy { animation: fadeIn 0.8s ease-out 0.3s both; }
+.approach { animation: fadeUp 0.6s ease-out 0.35s both; }
+.contact { animation: fadeUp 0.8s ease-out 0.4s both; }
+.footer { animation: fadeIn 0.6s ease-out 0.5s both; }
+@media print { body { background: white; color: #1a1a1a; } body::after, .nav, .hero-ascii-top, .hero-ascii-bottom, .domains-border, .section-title-ascii, .section-title-motif, .footer-line, .approach-motif, .philosophy-motifs, .footer-motif { display: none; } main { padding: 0; max-width: 100%; } .philosophy { background: none; margin: 0; padding: 32px 0; } .contact-btn { border: 1px solid #ccc; color: #333; } .about-lead strong { color: #333; } .philosophy-quote em { color: #333; } }

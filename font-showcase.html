@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Workshop — Victor's Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FDFBF7;
+            --text: #5C4F3D;
+            --accent: #C49A22;
+            --secondary: #B56E34;
+            --border: #E0D5C7;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+            padding: 3rem 2rem;
+        }
+
+        @font-face { font-family: 'ElSol'; src: url('fonts/ElSol.otf') format('opentype'); font-display: swap; }
+        @font-face { font-family: 'Nehalem'; src: url('fonts/Nehalem.otf') format('opentype'); font-display: swap; }
+        @font-face { font-family: 'OCOTILLOSHADOW'; src: url('fonts/OCOTILLOSHADOW.otf') format('opentype'); font-display: swap; }
+        @font-face { font-family: 'Rainier'; src: url('fonts/Rainier.otf') format('opentype'); font-display: swap; }
+        @font-face { font-family: 'PendOreille'; src: url('fonts/PendOreille.otf') format('opentype'); font-display: swap; }
+        @font-face { font-family: 'PaloSanto'; src: url('fonts/PaloSanto.otf') format('opentype'); font-display: swap; }
+        @font-face { font-family: 'Terlingua'; src: url('fonts/Terlingua.otf') format('opentype'); font-display: swap; }
+        @font-face { font-family: 'SONORAN'; src: url('fonts/SONORAN.otf') format('opentype'); font-display: swap; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .header h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+            color: var(--text);
+        }
+
+        .header p {
+            color: #8A7D6B;
+            font-size: 0.95rem;
+        }
+
+        /* Fonts Grid */
+        .fonts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .font-card {
+            padding: 2rem;
+            background: white;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .font-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-color: var(--accent);
+        }
+
+        .font-number {
+            font-size: 0.6rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+
+        .font-name {
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            font-weight: normal;
+        }
+
+        .font-sample {
+            margin-bottom: 1.5rem;
+        }
+
+        .sample-label {
+            font-size: 0.65rem;
+            color: #8A7D6B;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+            display: block;
+            opacity: 0.7;
+        }
+
+        .sample-text {
+            font-size: 2rem;
+            line-height: 1.2;
+            word-break: break-word;
+            min-height: 3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: #8A7D6B;
+            font-size: 0.9rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body { padding: 2rem 1rem; }
+            .header h1 { font-size: 1.8rem; }
+            .fonts-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .sample-text { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⭐ Font Workshop</h1>
+            <p>Pick your favorites</p>
+        </div>
+
+        <div class="fonts-grid" id="fontsGrid"></div>
+
+        <div class="footer">
+            <p>Tell me which fonts you like!</p>
+            <a href="index.html" class="back-link">← Back to site</a>
+        </div>
+    </div>
+
+    <script>
+        const fonts = [
+            'ElSol', 'Nehalem', 'OCOTILLOSHADOW', 'Rainier', 'PendOreille', 'PaloSanto', 'Terlingua', 'SONORAN'
+        ];
+
+        const grid = document.getElementById('fontsGrid');
+        fonts.forEach((font, index) => {
+            const card = document.createElement('div');
+            card.className = 'font-card';
+            const fontNumber = String(index + 1).padStart(2, '0');
+
+            card.innerHTML = `
+                <div class="font-number">${fontNumber}</div>
+                <div class="font-name">${font}</div>
+                <div class="font-sample">
+                    <span class="sample-label">Sample</span>
+                    <div class="sample-text" style="font-family: '${font}'">Victor</div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>

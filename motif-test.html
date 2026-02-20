@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Motif Test</title>
+<style>
+@font-face { font-family: 'DanimauxDeux'; src: url('fonts/DanimauxDeux.otf') format('opentype'); }
+@font-face { font-family: 'Danimaux'; src: url('fonts/Danimaux.otf') format('opentype'); }
+@font-face { font-family: 'ElSol'; src: url('fonts/ElSol.otf') format('opentype'); }
+@font-face { font-family: 'Nopales'; src: url('fonts/Nopales.otf') format('opentype'); }
+@font-face { font-family: 'OaxacaPrickly'; src: url('fonts/OaxacaPrickly.otf') format('opentype'); }
+
+body { background: #1E1C19; color: #E8E2D6; padding: 40px 60px; font-family: Georgia, serif; }
+.section { margin-bottom: 40px; border-bottom: 1px solid #333; padding-bottom: 24px; }
+.label { font-family: monospace; font-size: 11px; color: #8A8578; margin-bottom: 12px; }
+.row { display: flex; gap: 32px; align-items: center; margin-bottom: 8px; }
+.glyph { font-size: 48px; color: #D4A229; }
+.glyph-lg { font-size: 72px; color: #D4A229; }
+.char-label { font-family: monospace; font-size: 10px; color: #5A564E; }
+
+h2 { font-family: monospace; font-size: 13px; color: #C47B3F; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
+</style>
+</head>
+<body>
+
+<h1 style="font-family:monospace;font-size:14px;color:#8A8578;margin-bottom:40px;">MOTIF TEST — Which glyphs render in each font?</h1>
+
+<div class="section">
+<h2>DanimauxDeux — Unicode symbols</h2>
+<div class="row">
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">★</div><div class="char-label">★ U+2605</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">☆</div><div class="char-label">☆ U+2606</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">✦</div><div class="char-label">✦ U+2726</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">✧</div><div class="char-label">✧ U+2727</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">◆</div><div class="char-label">◆ U+25C6</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">◇</div><div class="char-label">◇ U+25C7</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">●</div><div class="char-label">● U+25CF</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">○</div><div class="char-label">○ U+25CB</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">❖</div><div class="char-label">❖ U+2756</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">※</div><div class="char-label">※ U+203B</div></div>
+</div>
+<div class="label">Letters as motifs (these ARE in the font):</div>
+<div class="row">
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">*</div><div class="char-label">* asterisk</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">&</div><div class="char-label">& ampersand</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">@</div><div class="char-label">@ at</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">#</div><div class="char-label"># hash</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">+</div><div class="char-label">+ plus</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">!</div><div class="char-label">! exclaim</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">?</div><div class="char-label">? question</div></div>
+    <div><div class="glyph" style="font-family:'DanimauxDeux'">.</div><div class="char-label">. period</div></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Danimaux — Unicode symbols</h2>
+<div class="row">
+    <div><div class="glyph" style="font-family:'Danimaux'">★</div><div class="char-label">★ U+2605</div></div>
+    <div><div class="glyph" style="font-family:'Danimaux'">☆</div><div class="char-label">☆ U+2606</div></div>
+    <div><div class="glyph" style="font-family:'Danimaux'">✦</div><div class="char-label">✦ U+2726</div></div>
+    <div><div class="glyph" style="font-family:'Danimaux'">✧</div><div class="char-label">✧ U+2727</div></div>
+    <div><div class="glyph" style="font-family:'Danimaux'">◆</div><div class="char-label">◆ U+25C6</div></div>
+    <div><div class="glyph" style="font-family:'Danimaux'">❖</div><div class="char-label">❖ U+2756</div></div>
+</div>
+</div>
+
+<div class="section">
+<h2>ElSol — Unicode symbols</h2>
+<div class="row">
+    <div><div class="glyph" style="font-family:'ElSol'">★</div><div class="char-label">★ U+2605</div></div>
+    <div><div class="glyph" style="font-family:'ElSol'">☆</div><div class="char-label">☆ U+2606</div></div>
+    <div><div class="glyph" style="font-family:'ElSol'">✦</div><div class="char-label">✦ U+2726</div></div>
+    <div><div class="glyph" style="font-family:'ElSol'">✧</div><div class="char-label">✧ U+2727</div></div>
+    <div><div class="glyph" style="font-family:'ElSol'">◆</div><div class="char-label">◆ U+25C6</div></div>
+    <div><div class="glyph" style="font-family:'ElSol'">❖</div><div class="char-label">❖ U+2756</div></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Nopales — Unicode symbols</h2>
+<div class="row">
+    <div><div class="glyph" style="font-family:'Nopales'">★</div><div class="char-label">★ U+2605</div></div>
+    <div><div class="glyph" style="font-family:'Nopales'">✦</div><div class="char-label">✦ U+2726</div></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Side-by-side comparison at hero size</h2>
+<div class="label">System fallback (Georgia):</div>
+<div class="glyph-lg" style="font-family: Georgia, serif; letter-spacing: 24px;">★ ✦ ◆</div>
+<br><br>
+<div class="label">DanimauxDeux:</div>
+<div class="glyph-lg" style="font-family: 'DanimauxDeux', serif; letter-spacing: 24px;">★ ✦ ◆</div>
+<br><br>
+<div class="label">Danimaux:</div>
+<div class="glyph-lg" style="font-family: 'Danimaux', serif; letter-spacing: 24px;">★ ✦ ◆</div>
+<br><br>
+<div class="label">ElSol:</div>
+<div class="glyph-lg" style="font-family: 'ElSol', serif; letter-spacing: 24px;">★ ✦ ◆</div>
+<br><br>
+<div class="label">DanimauxDeux using ASCII chars as motifs:</div>
+<div class="glyph-lg" style="font-family: 'DanimauxDeux', serif; letter-spacing: 24px;">* + & @</div>
+</div>
+
+</body>
+</html>

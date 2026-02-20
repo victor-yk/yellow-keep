@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pick a Motif Font</title>
+<style>
+@font-face { font-family: 'Nehalem'; src: url('fonts/Nehalem.otf') format('opentype'); }
+@font-face { font-family: 'Danimaux'; src: url('fonts/Danimaux.otf') format('opentype'); }
+@font-face { font-family: 'ElSol'; src: url('fonts/ElSol.otf') format('opentype'); }
+@font-face { font-family: 'Nopales'; src: url('fonts/Nopales.otf') format('opentype'); }
+@font-face { font-family: 'DeOroSmall'; src: url('fonts/DeOro-Small.otf') format('opentype'); }
+@font-face { font-family: 'DeOro'; src: url('fonts/DeOro.otf') format('opentype'); }
+
+body { background: #FDFBF7; color: #5C4F3D; padding: 40px 60px; font-family: Georgia, serif; }
+.section { margin-bottom: 48px; border-bottom: 1px solid #e0dcd4; padding-bottom: 32px; }
+.label { font-family: monospace; font-size: 12px; color: #B56E34; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* Simulating real usage contexts */
+.hero-sim {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+.hero-name { font-family: 'Nehalem', serif; font-size: 72px; color: #5C4F3D; }
+.hero-star { color: #C49A22; }
+
+.title-sim {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.title-text { font-family: 'Nehalem', serif; font-size: 48px; color: #5C4F3D; }
+.title-motif { color: #B56E34; }
+
+.divider-sim {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: #C49A22;
+    opacity: 0.4;
+    margin-bottom: 16px;
+}
+
+.bullet-sim {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    margin-bottom: 8px;
+    font-family: "SF Mono", monospace;
+    font-size: 12px;
+    color: #8A7D6B;
+}
+.bullet-motif { color: #C49A22; opacity: 0.6; }
+</style>
+</head>
+<body>
+
+<h1 style="font-family:monospace;font-size:14px;color:#999;margin-bottom:40px;">PICK A MOTIF FONT — Same layout, different fonts</h1>
+
+<div class="section">
+<div class="label">A — Danimaux (clean bold, nice symbols)</div>
+<div class="hero-sim">
+    <span class="hero-name">Victor</span>
+    <span class="hero-star" style="font-family:'Danimaux';font-size:32px;">★</span>
+    <span class="hero-name">Clement</span>
+</div>
+<div class="title-sim">
+    <span class="title-motif" style="font-family:'Danimaux';font-size:28px;">✦</span>
+    <span class="title-text">About</span>
+</div>
+<div class="divider-sim" style="font-family:'Danimaux';font-size:20px;">
+    <span>✧</span><span>★</span><span>✦</span><span>★</span><span>✧</span>
+</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'Danimaux';font-size:11px;">★</span> Structured documentation</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'Danimaux';font-size:11px;">✦</span> Clear checklists</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'Danimaux';font-size:11px;">✧</span> Repeatable automation</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'Danimaux';font-size:11px;">❖</span> Step-by-step system design</div>
+</div>
+
+<div class="section">
+<div class="label">B — ElSol (hand-drawn, slightly playful)</div>
+<div class="hero-sim">
+    <span class="hero-name">Victor</span>
+    <span class="hero-star" style="font-family:'ElSol';font-size:32px;">★</span>
+    <span class="hero-name">Clement</span>
+</div>
+<div class="title-sim">
+    <span class="title-motif" style="font-family:'ElSol';font-size:28px;">✦</span>
+    <span class="title-text">About</span>
+</div>
+<div class="divider-sim" style="font-family:'ElSol';font-size:20px;">
+    <span>✧</span><span>★</span><span>✦</span><span>★</span><span>✧</span>
+</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'ElSol';font-size:11px;">★</span> Structured documentation</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'ElSol';font-size:11px;">✦</span> Clear checklists</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'ElSol';font-size:11px;">✧</span> Repeatable automation</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'ElSol';font-size:11px;">❖</span> Step-by-step system design</div>
+</div>
+
+<div class="section">
+<div class="label">C — Nopales (geometric, clean)</div>
+<div class="hero-sim">
+    <span class="hero-name">Victor</span>
+    <span class="hero-star" style="font-family:'Nopales';font-size:32px;">★</span>
+    <span class="hero-name">Clement</span>
+</div>
+<div class="title-sim">
+    <span class="title-motif" style="font-family:'Nopales';font-size:28px;">✦</span>
+    <span class="title-text">About</span>
+</div>
+<div class="divider-sim" style="font-family:'Nopales';font-size:20px;">
+    <span>★</span><span>✦</span><span>★</span>
+</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'Nopales';font-size:11px;">★</span> Structured documentation</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:'Nopales';font-size:11px;">✦</span> Clear checklists</div>
+</div>
+
+<div class="section">
+<div class="label">D — DeOro-Small (ornamental display)</div>
+<div class="hero-sim">
+    <span class="hero-name">Victor</span>
+    <span class="hero-star" style="font-family:'DeOroSmall';font-size:32px;">★</span>
+    <span class="hero-name">Clement</span>
+</div>
+<div class="title-sim">
+    <span class="title-motif" style="font-family:'DeOroSmall';font-size:28px;">✦</span>
+    <span class="title-text">About</span>
+</div>
+<div class="divider-sim" style="font-family:'DeOroSmall';font-size:20px;">
+    <span>★</span><span>✦</span><span>★</span>
+</div>
+</div>
+
+<div class="section">
+<div class="label">E — DeOro (regular)</div>
+<div class="hero-sim">
+    <span class="hero-name">Victor</span>
+    <span class="hero-star" style="font-family:'DeOro';font-size:32px;">★</span>
+    <span class="hero-name">Clement</span>
+</div>
+<div class="title-sim">
+    <span class="title-motif" style="font-family:'DeOro';font-size:28px;">✦</span>
+    <span class="title-text">About</span>
+</div>
+<div class="divider-sim" style="font-family:'DeOro';font-size:20px;">
+    <span>★</span><span>✦</span><span>★</span>
+</div>
+</div>
+
+<div class="section">
+<div class="label">F — System Georgia (for comparison)</div>
+<div class="hero-sim">
+    <span class="hero-name">Victor</span>
+    <span class="hero-star" style="font-family:Georgia;font-size:32px;">★</span>
+    <span class="hero-name">Clement</span>
+</div>
+<div class="title-sim">
+    <span class="title-motif" style="font-family:Georgia;font-size:28px;">✦</span>
+    <span class="title-text">About</span>
+</div>
+<div class="divider-sim" style="font-family:Georgia;font-size:20px;">
+    <span>✧</span><span>★</span><span>✦</span><span>★</span><span>✧</span>
+</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:Georgia;font-size:11px;">★</span> Structured documentation</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:Georgia;font-size:11px;">✦</span> Clear checklists</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:Georgia;font-size:11px;">✧</span> Repeatable automation</div>
+<div class="bullet-sim"><span class="bullet-motif" style="font-family:Georgia;font-size:11px;">❖</span> Step-by-step system design</div>
+</div>
+
+</body>
+</html>

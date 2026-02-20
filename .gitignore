@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Firecrawl cache
+.firecrawl/
+
+# Playwright
+.playwright-mcp/
+
+# Claude
+.claude/
+
+# Test screenshots
+*.png

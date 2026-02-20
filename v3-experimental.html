@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Clement — Software Engineer</title>
+    <meta name="description" content="Victor Clement — Belgian software engineer operating at the intersection of backend systems, data migration, medical imaging, and applied AI.">
+    <link rel="stylesheet" href="style-v3.css">
+</head>
+<body>
+
+    <!-- Cursor-reactive glow -->
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Brick canvas (behind everything) -->
+    <div class="brick-canvas" id="brickCanvas" aria-hidden="true"></div>
+
+    <!-- ═══ NAV ═══ -->
+    <nav class="nav" aria-label="Navigation">
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand">YK</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
+            <span class="nav-label">Software Engineer</span>
+            <div class="nav-spacer"></div>
+            <a href="#about" class="nav-link">About</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
+            <a href="#expertise" class="nav-link">Expertise</a>
+            <span class="nav-sep" aria-hidden="true">|</span>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ═══ HERO ═══ -->
+        <section class="hero" aria-label="Introduction">
+            <div class="container hero-inner">
+                <div class="hero-number" aria-hidden="true">[01]</div>
+                <div class="hero-name">
+                    <h1>
+                        <span class="hero-first" data-text="Victor">Victor</span>
+                        <div class="hero-divider" aria-hidden="true">
+                            <span class="hero-divider-line"></span>
+                            <span class="hero-divider-plus">+</span>
+                            <span class="hero-divider-line"></span>
+                        </div>
+                        <span class="hero-last" data-text="Clement">Clement</span>
+                    </h1>
+                </div>
+                <div class="hero-right">
+                    <p class="hero-tagline">I build systems that make<br>complicated operations feel simple</p>
+                    <div class="hero-meta">
+                        <span>+ Based in Belgium</span>
+                        <span>+ Available worldwide</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="mailto:victor@yellowkeep.be" class="cta-btn">
+                            <span class="cta-brace">{</span>&nbsp;get in touch&nbsp;<span class="cta-brace">}</span>
+                        </a>
+                        <a href="https://linkedin.com/in/clementvictor" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--secondary">
+                            <span class="cta-brace">{</span>&nbsp;linkedin&nbsp;<span class="cta-brace">}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Binary strip 1 -->
+        <div class="binary-strip" aria-hidden="true">
+            <div class="binary-row"><span>0 1 0 1 0 1 1 0 &ensp; 0 1 0 0 1 0 0 1 &ensp; 0 1 0 0 0 0 1 1 &ensp; 0 1 0 1 0 1 0 0 &ensp; 0 1 0 0 1 1 1 1 &ensp; 0 1 0 1 0 0 1 0</span><span>0 1 0 1 0 1 1 0 &ensp; 0 1 0 0 1 0 0 1 &ensp; 0 1 0 0 0 0 1 1 &ensp; 0 1 0 1 0 1 0 0 &ensp; 0 1 0 0 1 1 1 1 &ensp; 0 1 0 1 0 0 1 0</span></div>
+            <div class="binary-row"><span>1 1 0 0 1 0 1 0 &ensp; 0 0 1 1 0 1 0 1 &ensp; 1 0 1 0 0 1 1 0 &ensp; 0 1 1 0 1 0 0 1 &ensp; 1 0 0 1 0 1 1 0 &ensp; 0 1 0 0 1 1 0 1</span><span>1 1 0 0 1 0 1 0 &ensp; 0 0 1 1 0 1 0 1 &ensp; 1 0 1 0 0 1 1 0 &ensp; 0 1 1 0 1 0 0 1 &ensp; 1 0 0 1 0 1 1 0 &ensp; 0 1 0 0 1 1 0 1</span></div>
+            <div class="binary-row"><span>0 0 1 0 1 1 0 1 &ensp; 1 0 0 1 0 0 1 0 &ensp; 0 1 1 0 1 0 1 1 &ensp; 1 0 1 0 0 0 1 1 &ensp; 0 1 0 1 1 0 0 1 &ensp; 1 1 0 0 0 1 0 0</span><span>0 0 1 0 1 1 0 1 &ensp; 1 0 0 1 0 0 1 0 &ensp; 0 1 1 0 1 0 1 1 &ensp; 1 0 1 0 0 0 1 1 &ensp; 0 1 0 1 1 0 0 1 &ensp; 1 1 0 0 0 1 0 0</span></div>
+        </div>
+
+        <!-- ═══ ABOUT [02] ═══ -->
+        <section class="about" id="about" aria-label="About">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">[02]</span>
+                    <h2 class="section-title">About</h2>
+                    <span class="section-dash" aria-hidden="true"></span>
+                </div>
+                <div class="about-grid">
+                    <div class="about-narrative">
+                        <p class="about-lead">
+                            I'm a Belgian software engineer operating at the intersection of
+                            <strong>backend systems</strong>, <strong>data migration</strong>,
+                            <strong>medical imaging</strong>, and <strong>applied AI</strong>.
+                        </p>
+                        <p class="about-body">
+                            I design, maintain, and evolve complex systems that people depend on every day.
+                            I care about how things fit together, how processes flow, and how to make
+                            complicated operations feel simple.
+                        </p>
+                    </div>
+                    <div class="about-domains">
+                        <div class="about-domains-label" aria-hidden="true">Domains</div>
+                        <ul>
+                            <li>Backend Systems</li>
+                            <li>Data Migration</li>
+                            <li>Medical Imaging</li>
+                            <li>Applied AI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Binary strip 2 -->
+        <div class="binary-strip" aria-hidden="true">
+            <div class="binary-row"><span>0 1 0 0 0 0 1 1 &ensp; 0 1 0 0 1 1 0 0 &ensp; 0 1 0 0 0 1 0 1 &ensp; 0 1 0 0 1 1 0 1 &ensp; 0 1 0 0 0 1 0 1 &ensp; 0 1 0 0 1 1 1 0</span><span>0 1 0 0 0 0 1 1 &ensp; 0 1 0 0 1 1 0 0 &ensp; 0 1 0 0 0 1 0 1 &ensp; 0 1 0 0 1 1 0 1 &ensp; 0 1 0 0 0 1 0 1 &ensp; 0 1 0 0 1 1 1 0</span></div>
+            <div class="binary-row"><span>1 0 1 1 0 0 1 0 &ensp; 1 1 0 1 0 0 0 1 &ensp; 0 0 1 0 1 1 0 0 &ensp; 1 0 0 0 1 1 0 1 &ensp; 0 1 1 1 0 0 1 0 &ensp; 1 0 1 0 1 0 0 1</span><span>1 0 1 1 0 0 1 0 &ensp; 1 1 0 1 0 0 0 1 &ensp; 0 0 1 0 1 1 0 0 &ensp; 1 0 0 0 1 1 0 1 &ensp; 0 1 1 1 0 0 1 0 &ensp; 1 0 1 0 1 0 0 1</span></div>
+        </div>
+
+        <!-- ═══ EXPERTISE [03] ═══ -->
+        <section class="expertise" id="expertise" aria-label="Expertise">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">[03]</span>
+                    <h2 class="section-title">Expertise</h2>
+                    <span class="section-dash" aria-hidden="true"></span>
+                </div>
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <span class="expertise-marker">01</span>
+                        <h3 class="expertise-name">Veterinary Software &amp; Data Migration</h3>
+                        <p class="expertise-desc">MySQL, Aurora, XML/XSLT pipelines, shell automation, data integrity validation</p>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="expertise-marker">02</span>
+                        <h3 class="expertise-name">Medical Imaging &amp; Edge Devices</h3>
+                        <p class="expertise-desc">DICOM integrations, Raspberry Pi, Docker deployments, reverse tunnels, Java services</p>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="expertise-marker">03</span>
+                        <h3 class="expertise-name">AI &amp; Applied Systems</h3>
+                        <p class="expertise-desc">RAG pipelines, Spring Boot, Angular, Azure AI Search, vector embeddings</p>
+                    </div>
+                    <div class="expertise-card">
+                        <span class="expertise-marker">04</span>
+                        <h3 class="expertise-name">Process Automation &amp; Tooling</h3>
+                        <p class="expertise-desc">Bash, Docker, CI/CD, Salt SSH, internal tooling, repeatable automation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Binary strip 3 -->
+        <div class="binary-strip" aria-hidden="true">
+            <div class="binary-row"><span>0 1 0 1 0 0 1 1 &ensp; 0 1 0 1 1 0 0 1 &ensp; 0 1 0 1 0 0 1 1 &ensp; 0 1 0 1 0 1 0 0 &ensp; 0 1 0 0 0 1 0 1 &ensp; 0 1 0 0 1 1 0 1</span><span>0 1 0 1 0 0 1 1 &ensp; 0 1 0 1 1 0 0 1 &ensp; 0 1 0 1 0 0 1 1 &ensp; 0 1 0 1 0 1 0 0 &ensp; 0 1 0 0 0 1 0 1 &ensp; 0 1 0 0 1 1 0 1</span></div>
+            <div class="binary-row"><span>1 0 0 1 1 0 1 0 &ensp; 0 1 1 0 0 1 0 1 &ensp; 1 1 0 0 1 0 0 1 &ensp; 0 0 1 1 0 1 1 0 &ensp; 1 0 1 0 0 1 0 1 &ensp; 0 1 0 1 1 0 1 0</span><span>1 0 0 1 1 0 1 0 &ensp; 0 1 1 0 0 1 0 1 &ensp; 1 1 0 0 1 0 0 1 &ensp; 0 0 1 1 0 1 1 0 &ensp; 1 0 1 0 0 1 0 1 &ensp; 0 1 0 1 1 0 1 0</span></div>
+            <div class="binary-row"><span>0 1 1 0 0 0 1 1 &ensp; 1 0 0 1 1 1 0 0 &ensp; 0 1 0 1 0 1 0 0 &ensp; 1 0 1 0 1 0 1 1 &ensp; 0 0 1 1 0 0 1 0 &ensp; 1 1 0 0 1 1 0 1</span><span>0 1 1 0 0 0 1 1 &ensp; 1 0 0 1 1 1 0 0 &ensp; 0 1 0 1 0 1 0 0 &ensp; 1 0 1 0 1 0 1 1 &ensp; 0 0 1 1 0 0 1 0 &ensp; 1 1 0 0 1 1 0 1</span></div>
+        </div>
+
+        <!-- ═══ PHILOSOPHY ═══ -->
+        <section class="philosophy" aria-label="Philosophy">
+            <div class="container">
+                <div class="philosophy-inner">
+                    <span class="philosophy-crop philosophy-crop--start" aria-hidden="true">/-</span>
+                    <blockquote class="philosophy-quote">
+                        <p>"If something is manual twice,<br><em>automate it.</em></p>
+                        <p>If something is confusing,<br><em>redesign it."</em></p>
+                    </blockquote>
+                    <span class="philosophy-crop philosophy-crop--end" aria-hidden="true">-/</span>
+                </div>
+                <div class="philosophy-dashes" aria-hidden="true">— — — — — — — — — — — —</div>
+            </div>
+        </section>
+
+        <!-- Binary strip 4 -->
+        <div class="binary-strip" aria-hidden="true">
+            <div class="binary-row"><span>0 1 0 0 0 0 1 0 &ensp; 0 1 0 1 0 1 0 1 &ensp; 0 1 0 0 1 0 0 1 &ensp; 0 1 0 0 1 1 0 0 &ensp; 0 1 0 0 0 1 0 0 &ensp; 0 1 0 0 0 1 0 1</span><span>0 1 0 0 0 0 1 0 &ensp; 0 1 0 1 0 1 0 1 &ensp; 0 1 0 0 1 0 0 1 &ensp; 0 1 0 0 1 1 0 0 &ensp; 0 1 0 0 0 1 0 0 &ensp; 0 1 0 0 0 1 0 1</span></div>
+            <div class="binary-row"><span>1 1 0 1 0 1 0 0 &ensp; 0 0 1 0 1 0 1 1 &ensp; 1 0 1 1 0 1 0 0 &ensp; 0 1 0 0 1 0 1 1 &ensp; 1 0 0 1 1 0 1 0 &ensp; 0 1 1 0 0 1 0 1</span><span>1 1 0 1 0 1 0 0 &ensp; 0 0 1 0 1 0 1 1 &ensp; 1 0 1 1 0 1 0 0 &ensp; 0 1 0 0 1 0 1 1 &ensp; 1 0 0 1 1 0 1 0 &ensp; 0 1 1 0 0 1 0 1</span></div>
+        </div>
+
+        <!-- ═══ APPROACH [05] ═══ -->
+        <section class="approach" id="approach" aria-label="Approach">
+            <div class="container approach-inner">
+                <div class="section-header">
+                    <span class="section-number">[05]</span>
+                    <h2 class="section-title">Approach</h2>
+                    <span class="section-dash" aria-hidden="true"></span>
+                </div>
+                <div class="approach-bg-number" aria-hidden="true">05</div>
+                <div class="approach-list">
+                    <div class="approach-item">
+                        <span class="approach-num">01</span>
+                        <span class="approach-text">Structured documentation</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-num">02</span>
+                        <span class="approach-text">Clear checklists</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-num">03</span>
+                        <span class="approach-text">Repeatable automation</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-num">04</span>
+                        <span class="approach-text">Step-by-step system design</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-num">05</span>
+                        <span class="approach-text">Internal tooling to remove friction</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══ CONTACT [06] ═══ -->
+    <section class="contact" id="contact" aria-label="Contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">[06]</span>
+                <h2 class="section-title">Let's connect</h2>
+                <span class="section-dash" aria-hidden="true"></span>
+            </div>
+            <p class="contact-intro">Have a project in mind, or just want to talk systems?</p>
+            <div class="contact-links">
+                <a href="mailto:victor@yellowkeep.be" class="cta-btn">
+                    <span class="cta-brace">{</span>&nbsp;victor@yellowkeep.be&nbsp;<span class="cta-brace">}</span>
+                </a>
+                <a href="https://linkedin.com/in/clementvictor" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--secondary">
+                    <span class="cta-brace">{</span>&nbsp;linkedin&nbsp;<span class="cta-brace">}</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer" aria-label="Footer">
+        <div class="container">
+            <div class="footer-line" aria-hidden="true"></div>
+            <div class="footer-inner">
+                <span class="footer-company">Yellow Keep</span>
+                <span class="footer-year">2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+    (function() {
+        'use strict';
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isMobile = window.innerWidth <= 768;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ─── Letter Shuffle Reveal ───
+        function shuffleReveal(element, delay) {
+            const text = element.dataset.text;
+            if (!text) return;
+            const chars = text.split('');
+            element.textContent = '';
+            const randomPool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*!?';
+
+            chars.forEach(function(char) {
+                var span = document.createElement('span');
+                span.className = 'shuffle-char';
+                span.textContent = char;
+                span.style.opacity = '0';
+                element.appendChild(span);
+            });
+
+            var spans = element.querySelectorAll('.shuffle-char');
+
+            spans.forEach(function(span, i) {
+                var finalChar = chars[i];
+                var charDelay = delay + i * 60;
+                var shuffleDuration = 350 + Math.random() * 200;
+
+                setTimeout(function() {
+                    span.style.opacity = '1';
+                    var startTime = Date.now();
+
+                    function tick() {
+                        var elapsed = Date.now() - startTime;
+                        if (elapsed < shuffleDuration) {
+                            span.textContent = randomPool[Math.floor(Math.random() * randomPool.length)];
+                            requestAnimationFrame(tick);
+                        } else {
+                            span.textContent = finalChar;
+                        }
+                    }
+                    requestAnimationFrame(tick);
+                }, charDelay);
+            });
+        }
+
+        // ─── Word Wrap for Philosophy ───
+        function wrapWords(element) {
+            var walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+            var textNodes = [];
+            while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+            textNodes.forEach(function(node) {
+                var parts = node.textContent.split(/(\s+)/);
+                var fragment = document.createDocumentFragment();
+                parts.forEach(function(part) {
+                    if (/^\s+$/.test(part)) {
+                        fragment.appendChild(document.createTextNode(part));
+                    } else if (part) {
+                        var span = document.createElement('span');
+                        span.className = 'word';
+                        span.textContent = part;
+                        fragment.appendChild(span);
+                    }
+                });
+                node.parentNode.replaceChild(fragment, node);
+            });
+        }
+
+        // ─── Gaussian Random ───
+        function gaussianRandom(mean, stdDev) {
+            var u1 = Math.random();
+            var u2 = Math.random();
+            var z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
+            return z0 * stdDev + mean;
+        }
+
+        // ─── HERO ENTRANCE ───
+        if (!prefersReducedMotion) {
+            // Initial states
+            gsap.set('.nav', { y: -60, opacity: 0 });
+            gsap.set('.hero-number', { opacity: 0 });
+            gsap.set('.hero-first', { opacity: 0 });
+            gsap.set('.hero-divider-line', { scaleX: 0 });
+            gsap.set('.hero-divider-plus', { opacity: 0 });
+            gsap.set('.hero-last', { opacity: 0 });
+            gsap.set('.hero-tagline', { opacity: 0, y: 15 });
+            gsap.set('.hero-meta span', { opacity: 0, x: 20 });
+            gsap.set('.hero-cta .cta-btn', { opacity: 0, x: 20 });
+
+            var heroTl = gsap.timeline({ delay: 0.3 });
+
+            // 1. Nav slides down
+            heroTl.to('.nav', { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' });
+
+            // 2. Section number fades in
+            heroTl.to('.hero-number', { opacity: 1, duration: 0.3 }, '-=0.2');
+
+            // 3. Victor shuffle reveal
+            heroTl.add(function() {
+                var el = document.querySelector('.hero-first');
+                gsap.set(el, { opacity: 1 });
+                shuffleReveal(el, 0);
+            }, '-=0.1');
+
+            // 4. Divider line draws + plus appears
+            heroTl.to('.hero-divider-line', {
+                scaleX: 1, duration: 0.6, ease: 'power2.inOut'
+            }, '+=0.3');
+            heroTl.to('.hero-divider-plus', {
+                opacity: 1, duration: 0.3
+            }, '-=0.3');
+
+            // 5. Clement shuffle reveal
+            heroTl.add(function() {
+                var el = document.querySelector('.hero-last');
+                gsap.set(el, { opacity: 1 });
+                shuffleReveal(el, 0);
+            }, '-=0.1');
+
+            // 6. Tagline fades in
+            heroTl.to('.hero-tagline', {
+                opacity: 1, y: 0, duration: 0.5, ease: 'power2.out'
+            }, '+=0.4');
+
+            // 7. Meta + CTA stagger in from right
+            heroTl.to('.hero-meta span', {
+                opacity: 1, x: 0, duration: 0.4, stagger: 0.1, ease: 'power2.out'
+            }, '-=0.2');
+            heroTl.to('.hero-cta .cta-btn', {
+                opacity: 1, x: 0, duration: 0.4, stagger: 0.15, ease: 'power2.out'
+            }, '-=0.2');
+
+        } else {
+            // No animations — show everything
+            document.querySelectorAll('.hero-first, .hero-last, .hero-number, .hero-tagline, .hero-meta span, .hero-cta .cta-btn, .hero-divider-line, .hero-divider-plus').forEach(function(el) {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+        }
+
+        // ─── CURSOR-REACTIVE GLOW ───
+        if (!isMobile && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+            var glow = document.querySelector('.cursor-glow');
+            glow.style.display = 'block';
+            var xTo = gsap.quickTo(glow, 'left', { duration: 0.4, ease: 'power2.out' });
+            var yTo = gsap.quickTo(glow, 'top', { duration: 0.4, ease: 'power2.out' });
+
+            window.addEventListener('mousemove', function(e) {
+                xTo(e.clientX);
+                yTo(e.clientY);
+            });
+        }
+
+        // ─── SCROLL-TRIGGERED REVEALS ───
+        if (!prefersReducedMotion) {
+
+            // Section headers
+            gsap.utils.toArray('.section-number').forEach(function(el) {
+                // Skip hero number (already animated)
+                if (el.closest('.hero')) return;
+                gsap.from(el, {
+                    width: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                    scrollTrigger: { trigger: el, start: 'top 85%' }
+                });
+            });
+
+            gsap.utils.toArray('.section-title').forEach(function(el) {
+                gsap.from(el, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.7,
+                    ease: 'power2.out',
+                    scrollTrigger: { trigger: el, start: 'top 85%' }
+                });
+            });
+
+            gsap.utils.toArray('.section-dash').forEach(function(el) {
+                gsap.to(el, {
+                    width: 120,
+                    duration: 0.6,
+                    ease: 'power2.inOut',
+                    scrollTrigger: { trigger: el, start: 'top 85%' }
+                });
+            });
+
+            // About content
+            gsap.from('.about-lead', {
+                y: 25, opacity: 0, duration: 0.6,
+                scrollTrigger: { trigger: '.about-lead', start: 'top 85%' }
+            });
+            gsap.from('.about-body', {
+                y: 25, opacity: 0, duration: 0.6, delay: 0.15,
+                scrollTrigger: { trigger: '.about-body', start: 'top 85%' }
+            });
+            gsap.from('.about-domains li', {
+                x: 20, opacity: 0, duration: 0.4, stagger: 0.1,
+                scrollTrigger: { trigger: '.about-domains', start: 'top 85%' }
+            });
+
+            // Expertise cards — alternating sides
+            gsap.utils.toArray('.expertise-card').forEach(function(card, i) {
+                var fromX = (i % 2 === 0) ? -60 : 60;
+                gsap.from(card, {
+                    x: fromX, opacity: 0, duration: 0.7, ease: 'power2.out',
+                    scrollTrigger: { trigger: card, start: 'top 85%' }
+                });
+            });
+
+            // Philosophy — word-by-word
+            document.querySelectorAll('.philosophy-quote p').forEach(wrapWords);
+            gsap.from('.philosophy-quote .word', {
+                opacity: 0, y: 8, duration: 0.3, stagger: 0.04,
+                scrollTrigger: { trigger: '.philosophy', start: 'top 65%' }
+            });
+            gsap.from('.philosophy-crop', {
+                opacity: 0, duration: 0.5, delay: 0.3,
+                scrollTrigger: { trigger: '.philosophy', start: 'top 65%' }
+            });
+
+            // Approach items cascade
+            gsap.from('.approach-item', {
+                y: 30, opacity: 0, duration: 0.5, stagger: 0.12,
+                scrollTrigger: { trigger: '.approach-list', start: 'top 80%' }
+            });
+            gsap.from('.approach-bg-number', {
+                opacity: 0, scale: 0.9, duration: 1, ease: 'power2.out',
+                scrollTrigger: { trigger: '.approach', start: 'top 70%' }
+            });
+
+            // Contact — use onEnter for robust triggering
+            gsap.set('.contact-intro', { opacity: 0, y: 20 });
+            gsap.set('.contact-links .cta-btn', { opacity: 0, y: 20 });
+            ScrollTrigger.create({
+                trigger: '.contact',
+                start: 'top 80%',
+                once: true,
+                onEnter: function() {
+                    gsap.to('.contact-intro', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' });
+                    gsap.to('.contact-links .cta-btn', {
+                        opacity: 1, y: 0, duration: 0.4, stagger: 0.12, delay: 0.15, ease: 'power2.out'
+                    });
+                }
+            });
+
+            // Binary strips fade in
+            gsap.utils.toArray('.binary-strip').forEach(function(strip) {
+                gsap.from(strip, {
+                    opacity: 0, duration: 0.8,
+                    scrollTrigger: { trigger: strip, start: 'top 90%' }
+                });
+            });
+        }
+
+        // ─── FALLING BRICKS ───
+        if (!prefersReducedMotion) {
+            var brickCanvas = document.getElementById('brickCanvas');
+            var viewW = window.innerWidth;
+            var viewH = window.innerHeight;
+            var maxBricks = isMobile ? 20 : 50;
+            var brickCount = 0;
+            var groundMap = new Float32Array(viewW + 200).fill(0);
+            var bricksStarted = false;
+
+            var BRICK_SIZES = [
+                [80, 35],
+                [120, 35],
+                [60, 35]
+            ];
+
+            function createBrick(stdDev, delay) {
+                if (brickCount >= maxBricks) return;
+                brickCount++;
+
+                var sizeIdx = Math.floor(Math.random() * BRICK_SIZES.length);
+                var w = BRICK_SIZES[sizeIdx][0];
+                var h = BRICK_SIZES[sizeIdx][1];
+
+                var brick = document.createElement('div');
+                brick.className = 'brick';
+                brick.style.width = w + 'px';
+                brick.style.height = h + 'px';
+
+                // Gaussian horizontal position (center-weighted)
+                var x = gaussianRandom(viewW / 2, stdDev);
+                x = Math.max(20, Math.min(viewW - w - 20, x));
+                x = Math.round(x);
+
+                brick.style.left = x + 'px';
+                brickCanvas.appendChild(brick);
+
+                // Find highest point under this brick's footprint
+                var xEnd = Math.min(x + w, groundMap.length - 1);
+                var maxH = 0;
+                for (var i = x; i <= xEnd; i++) {
+                    if (groundMap[i] > maxH) maxH = groundMap[i];
+                }
+
+                var landingY = viewH - maxH - h;
+
+                // Update ground map
+                var newH = maxH + h;
+                for (var j = x; j <= xEnd; j++) {
+                    groundMap[j] = newH;
+                }
+
+                // Animate: fall from above with bounce
+                var startRotation = (Math.random() - 0.5) * 18;
+                gsap.set(brick, { y: -viewH - 100, rotation: startRotation, opacity: 0.8 + Math.random() * 0.2 });
+                gsap.to(brick, {
+                    y: landingY,
+                    rotation: (Math.random() - 0.5) * 2,
+                    duration: 1.2 + Math.random() * 0.6,
+                    ease: 'bounce.out',
+                    delay: delay || 0
+                });
+            }
+
+            function spawnWave(count, stagger, stdDev, waveDelay) {
+                for (var i = 0; i < count; i++) {
+                    createBrick(stdDev, waveDelay + i * stagger);
+                }
+            }
+
+            // Trigger bricks when approach section enters viewport
+            ScrollTrigger.create({
+                trigger: '.approach',
+                start: 'top 80%',
+                once: true,
+                onEnter: function() {
+                    if (bricksStarted) return;
+                    bricksStarted = true;
+
+                    var spread = viewW * 0.2;
+
+                    // Wave 1: 8 bricks, wide spread
+                    spawnWave(8, 0.2, spread, 0);
+
+                    // Wave 2: 6 bricks, slightly tighter
+                    spawnWave(6, 0.2, spread * 0.85, 1.8);
+
+                    // Wave 3: 5 bricks, tighter
+                    spawnWave(5, 0.2, spread * 0.7, 3.5);
+
+                    // Wave 4: 4 bricks, tight
+                    spawnWave(4, 0.25, spread * 0.55, 5.5);
+
+                    // Continuous: 1-2 bricks every 2s
+                    var continuousCount = 0;
+                    var maxContinuous = maxBricks - 23; // 8+6+5+4 = 23
+                    var interval = setInterval(function() {
+                        if (continuousCount >= maxContinuous || brickCount >= maxBricks) {
+                            clearInterval(interval);
+                            return;
+                        }
+                        createBrick(spread * 0.45, 0);
+                        continuousCount++;
+                        if (Math.random() > 0.4 && continuousCount < maxContinuous) {
+                            createBrick(spread * 0.4, 0.6);
+                            continuousCount++;
+                        }
+                    }, 2200);
+                }
+            });
+        }
+
+    })();
+    </script>
+
+</body>
+</html>
