@@ -761,7 +761,7 @@ main {
     }
 
     .hero-inner {
-        padding: 80px 0 40px;
+        padding: 80px var(--padding) 40px;
     }
 
     .hero-number {
