@@ -4,195 +4,682 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Clement — Software Engineer</title>
-    <meta name="description" content="Victor Clement — Belgian software engineer operating at the intersection of backend systems, data migration, medical imaging, and applied AI.">
+    <meta name="description" content="Victor Clement — Belgian software engineer specializing in backend systems, data migration, medical imaging, and applied AI.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Victor Clement — Software Engineer">
+    <meta property="og:description" content="Backend systems, data migration, medical imaging, applied AI. Based in Belgium.">
+    <meta property="og:type" content="website">
+
+    <!-- Lenis CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1/dist/lenis.css">
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Scroll progress -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Cursor accent (desktop only, hidden by default) -->
+    <div class="cursor-circle" aria-hidden="true"></div>
+
+    <!-- Castle canvas (fixed behind everything) -->
+    <div class="castle-canvas" aria-hidden="true">
+        <pre class="ascii-castle" id="asciiCastle">                                                |>>>
+                                                |
+                                            _  _|_  _
+                                           |;|_|;|_|;|
+                                           \\.    .  /
+                                            \\:  .  /
+                                             ||:   |
+                                             ||:.  |
+                                             ||:  .|
+                                             ||:   |       \,/
+                                             ||: , |            /`\
+                                             ||:   |
+                                             ||: . |
+              __                            _||_   |
+     ____--`~    '--~~__            __ ----~    ~`---,              ___
+-~--~                   ~---__ ,--~'                  ~~----_____-~'   `~----~~</pre>
+    </div>
+
     <!-- ═══ NAV ═══ -->
-    <nav class="nav" aria-label="Navigation">
-        <span class="motif nav-motif" aria-hidden="true">✦</span>
-        <span class="nav-role">Software Engineer</span>
-        <span class="nav-sep" aria-hidden="true">——</span>
-        <span class="nav-role">Systems Thinker</span>
-        <div class="nav-center" aria-hidden="true">
-            <pre class="nav-sigil">┌──┐
-│YK│
-└──┘</pre>
+    <nav class="nav" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand" aria-label="Yellow Keep">YK</a>
+            <div class="nav-spacer"></div>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#approach" class="nav-link">Approach</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <span class="motif nav-motif" aria-hidden="true">✦</span>
     </nav>
 
     <main>
 
-        <!-- ═══ HERO ═══ -->
+        <!-- ═══ HERO [01] ═══ -->
         <section class="hero" aria-label="Introduction">
-            <div class="hero-ascii-top" aria-hidden="true">
-                <pre>╔══════════════════════════════════════════════════════════════════════════════════════════════════╗</pre>
-            </div>
-            <div class="hero-content">
-                <h1 class="name">
-                    <span class="name-first">Victor</span>
-                    <span class="name-star motif" aria-hidden="true">*</span>
-                    <span class="name-last">Clement</span>
-                </h1>
-                <div class="hero-tagline">
-                    <p class="tagline">I build systems that make<br>complicated operations feel simple</p>
+            <div class="container hero-inner">
+                <div class="hero-number" aria-hidden="true">01</div>
+                <div class="hero-name">
+                    <h1>
+                        <span class="hero-line hero-first" data-text="Victor">Victor</span>
+                        <div class="hero-divider" aria-hidden="true">
+                            <span class="hero-divider-line"></span>
+                            <span class="hero-divider-symbol">+</span>
+                            <span class="hero-divider-line"></span>
+                        </div>
+                        <span class="hero-line hero-last" data-text="Clement">Clement</span>
+                    </h1>
+                </div>
+                <div class="hero-right">
+                    <p class="hero-tagline">I build the systems<br>behind the systems</p>
                     <div class="hero-meta">
-                        <span class="meta-item"><span class="motif meta-motif" aria-hidden="true">✧</span> Based in Belgium</span>
-                        <span class="meta-item"><span class="motif meta-motif" aria-hidden="true">✧</span> Available worldwide</span>
+                        <span class="hero-meta-item">Based in Belgium</span>
+                        <span class="hero-meta-item">Available worldwide</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="mailto:victor@yellowkeep.be" class="cta-btn cta-btn--primary">
+                            <span class="cta-brace" aria-hidden="true">{</span>
+                            <span class="cta-label">&nbsp;get in touch&nbsp;</span>
+                            <span class="cta-brace" aria-hidden="true">}</span>
+                        </a>
+                        <a href="https://linkedin.com/in/clementvictor" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">
+                            <span class="cta-brace" aria-hidden="true">{</span>
+                            <span class="cta-label">&nbsp;linkedin&nbsp;</span>
+                            <span class="cta-brace" aria-hidden="true">}</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="hero-ascii-bottom" aria-hidden="true">
-                <pre>╚══════════════════════════════════════════════════════════════════════════════════════════════════╝</pre>
-            </div>
         </section>
 
-        <!-- ═══ ABOUT ═══ -->
+        <!-- ═══ ABOUT [02] ═══ -->
         <section class="about" id="about" aria-label="About">
-            <div class="section-title-wrap">
-                <span class="motif section-title-motif-before" aria-hidden="true">◆</span>
-                <h2 class="section-title">About</h2>
-                <pre class="section-title-ascii" aria-hidden="true">  ─────────────────────────</pre>
-            </div>
-
-            <div class="about-content">
-                <p class="about-lead">
-                    I'm a Belgian software engineer operating at the intersection of
-                    <strong>backend systems</strong>, <strong>data migration</strong>,
-                    <strong>medical imaging</strong>, and <strong>applied AI</strong>.
-                </p>
-                <p class="about-body">
-                    I design, maintain, and evolve complex systems that people depend on every day.
-                    I care about how things fit together, how processes flow, and how to make
-                    complicated operations feel simple.
-                </p>
-            </div>
-
-            <div class="domains">
-                <pre class="domains-border" aria-hidden="true">┌─── what I do ─────────────────────────────────────────────────────────────────┐</pre>
-                <div class="domain-grid">
-                    <div class="domain-card">
-                        <span class="motif domain-motif" aria-hidden="true">★</span>
-                        <span class="domain-marker" aria-hidden="true">01</span>
-                        <h3 class="domain-name">Veterinary Software<br>&amp; Data Migration</h3>
-                        <p class="domain-desc">MySQL, Aurora, XML/XSLT pipelines, shell automation, data integrity validation</p>
-                    </div>
-                    <div class="domain-card">
-                        <span class="motif domain-motif" aria-hidden="true">✦</span>
-                        <span class="domain-marker" aria-hidden="true">02</span>
-                        <h3 class="domain-name">Medical Imaging<br>&amp; Edge Devices</h3>
-                        <p class="domain-desc">DICOM integrations, Raspberry Pi, Docker deployments, reverse tunnels, Java services</p>
-                    </div>
-                    <div class="domain-card">
-                        <span class="motif domain-motif" aria-hidden="true">◆</span>
-                        <span class="domain-marker" aria-hidden="true">03</span>
-                        <h3 class="domain-name">AI &amp; Applied<br>Systems</h3>
-                        <p class="domain-desc">RAG pipelines, Spring Boot, Angular, Azure AI Search, vector embeddings</p>
-                    </div>
-                    <div class="domain-card">
-                        <span class="motif domain-motif" aria-hidden="true">✧</span>
-                        <span class="domain-marker" aria-hidden="true">04</span>
-                        <h3 class="domain-name">Process Automation<br>&amp; Tooling</h3>
-                        <p class="domain-desc">Bash, Docker, CI/CD, Salt SSH, internal tooling, repeatable automation</p>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number" aria-hidden="true">02</span>
+                    <h2 class="section-title">About</h2>
+                    <span class="section-rule" aria-hidden="true"></span>
+                </div>
+                <div class="about-content">
+                    <p class="about-lead">
+                        Independent software engineer running <em>Yellow Keep</em> from Belgium.
+                        I contract for Sonetas, where I build embedded <em>medical imaging</em>
+                        systems, run large-scale <em>data migrations</em>, and develop
+                        <em>AI-driven tooling</em> — from RAG pipelines to workflow automation.
+                    </p>
+                    <p class="about-body">
+                        I care about how things fit together. If something is manual twice,
+                        I automate it. If something is confusing, I redesign it.
+                    </p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-stack-label">Stack</span>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">DICOM</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Bash</span>
                     </div>
                 </div>
-                <pre class="domains-border" aria-hidden="true">└───────────────────────────────────────────────────────────────────────────────┘</pre>
-            </div>
-        </section>
-
-        <!-- ═══ PHILOSOPHY ═══ -->
-        <section class="philosophy" aria-label="Philosophy">
-            <div class="philosophy-inner">
-                <div class="philosophy-motifs" aria-hidden="true">
-                    <span class="motif">✧</span>
-                    <span class="motif">★</span>
-                    <span class="motif">✦</span>
-                    <span class="motif">★</span>
-                    <span class="motif">✧</span>
-                </div>
-                <blockquote class="philosophy-quote">
-                    <p>"If something is manual twice,<br><em>automate it.</em></p>
-                    <p>If something is confusing,<br><em>redesign it.</em>"</p>
-                </blockquote>
-                <div class="philosophy-motifs" aria-hidden="true">
-                    <span class="motif">✧</span>
-                    <span class="motif">★</span>
-                    <span class="motif">✦</span>
-                    <span class="motif">★</span>
-                    <span class="motif">✧</span>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="about-stat-label">Company</span>
+                        <span class="about-stat-value">Yellow Keep</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-label">Education</span>
+                        <span class="about-stat-value">BSc Computer Science, KdG</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-label">Languages</span>
+                        <span class="about-stat-value">NL · FR · EN · PT</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ═══ HOW I WORK ═══ -->
-        <section class="approach" aria-label="Approach">
-            <div class="approach-cols">
-                <div class="approach-item">
-                    <span class="motif approach-motif" aria-hidden="true">★</span>
-                    <span class="approach-text">Structured documentation</span>
+        <!-- ═══ WORK [03] ═══ -->
+        <section class="work" id="work" aria-label="Work">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number" aria-hidden="true">03</span>
+                    <h2 class="section-title">Work</h2>
+                    <span class="section-rule" aria-hidden="true"></span>
                 </div>
-                <div class="approach-item">
-                    <span class="motif approach-motif" aria-hidden="true">✦</span>
-                    <span class="approach-text">Clear checklists</span>
-                </div>
-                <div class="approach-item">
-                    <span class="motif approach-motif" aria-hidden="true">◆</span>
-                    <span class="approach-text">Repeatable automation</span>
-                </div>
-                <div class="approach-item">
-                    <span class="motif approach-motif" aria-hidden="true">✧</span>
-                    <span class="approach-text">Step-by-step system design</span>
-                </div>
-                <div class="approach-item">
-                    <span class="motif approach-motif" aria-hidden="true">❖</span>
-                    <span class="approach-text">Internal tooling to remove friction</span>
+                <div class="work-cards">
+
+                    <article class="work-card">
+                        <div class="work-card-inner">
+                            <div class="work-card-header">
+                                <h3 class="work-card-title">Symphony</h3>
+                                <p class="work-card-subtitle">DICOM gateway for veterinary imaging — Sonetas</p>
+                            </div>
+                            <ul class="work-card-details">
+                                <li>50+ Raspberry Pi devices deployed across veterinary practices</li>
+                                <li>DICOM association handling and interoperability with X-ray, CT, and echo scanners</li>
+                                <li>Docker-based deployments and remote management on embedded Linux</li>
+                                <li>Modernizing legacy Java codebase after years without updates</li>
+                                <li>Building a VPN-based plug-and-play deployment flow to replace manual CLI setup</li>
+                            </ul>
+                            <div class="work-card-tags">
+                                <span class="work-tag">Java</span>
+                                <span class="work-tag">Docker</span>
+                                <span class="work-tag">Linux</span>
+                                <span class="work-tag">DICOM</span>
+                                <span class="work-tag">Raspberry Pi</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-card-inner">
+                            <div class="work-card-header">
+                                <h3 class="work-card-title">Data Migration</h3>
+                                <p class="work-card-subtitle">Client onboarding at scale — Sonetas</p>
+                            </div>
+                            <ul class="work-card-details">
+                                <li>50+ clients migrated from 10+ different source applications</li>
+                                <li>Multi-format ingestion: XLSX, CSV, SQL dumps, MS Access, proprietary software</li>
+                                <li>Built and maintained in-house migration tool for data-to-SQL transformation</li>
+                                <li>End-to-end validation and schema mapping for target database</li>
+                            </ul>
+                            <div class="work-card-tags">
+                                <span class="work-tag">SQL</span>
+                                <span class="work-tag">Python</span>
+                                <span class="work-tag">ETL</span>
+                                <span class="work-tag">Data Transformation</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-card-inner">
+                            <div class="work-card-header">
+                                <h3 class="work-card-title">RAG Pipeline</h3>
+                                <p class="work-card-subtitle">AI-powered court case management — Axi</p>
+                            </div>
+                            <ul class="work-card-details">
+                                <li>End-to-end RAG architecture with vector and hybrid search</li>
+                                <li>Node.js microservices for document ingestion and embedding management</li>
+                                <li>Azure AI Search integration for semantic retrieval</li>
+                                <li>SSE streaming for responsive AI chat experiences</li>
+                                <li>Full-stack POC: Angular frontend, Spring Boot backend, Node.js service layer</li>
+                            </ul>
+                            <div class="work-card-tags">
+                                <span class="work-tag">Node.js</span>
+                                <span class="work-tag">Azure AI Search</span>
+                                <span class="work-tag">Spring Boot</span>
+                                <span class="work-tag">Angular</span>
+                                <span class="work-tag">RAG</span>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <!-- ═══ CONTACT ═══ -->
-        <section class="contact" id="contact" aria-label="Contact">
-            <div class="section-title-wrap">
-                <span class="motif section-title-motif-before" aria-hidden="true">★</span>
-                <h2 class="section-title">Contact</h2>
-                <pre class="section-title-ascii" aria-hidden="true">  ─────────────────────────</pre>
-            </div>
-
-            <div class="contact-content">
-                <p class="contact-intro"><span class="motif contact-motif" aria-hidden="true">✦</span> Let's connect.</p>
-                <div class="contact-links">
-                    <a href="mailto:victor@yellowkeep.be" class="contact-btn">
-                        { victor@yellowkeep.be }
-                    </a>
-                    <a href="https://linkedin.com/in/clementvictor" target="_blank" rel="noopener noreferrer" class="contact-btn">
-                        { linkedin }
-                    </a>
+        <!-- ═══ APPROACH [04] ═══ -->
+        <section class="approach" id="approach" aria-label="Approach">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number" aria-hidden="true">04</span>
+                    <h2 class="section-title">Approach</h2>
+                    <span class="section-rule" aria-hidden="true"></span>
+                </div>
+                <div class="approach-list">
+                    <div class="approach-item">
+                        <span class="approach-marker" aria-hidden="true">*</span>
+                        <span class="approach-text">Write the spec before writing the code</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-marker" aria-hidden="true">*</span>
+                        <span class="approach-text">Checklists and runbooks over tribal knowledge</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-marker" aria-hidden="true">*</span>
+                        <span class="approach-text">Build the tool that builds the thing</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-marker" aria-hidden="true">*</span>
+                        <span class="approach-text">Make deployments boring and repeatable</span>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- ═══ FOOTER ═══ -->
-        <footer class="footer" aria-label="Footer">
-            <div class="footer-inner">
-                <pre class="footer-line" aria-hidden="true">──────────────────────────────────────────────────────────────────────────────</pre>
-                <div class="footer-content">
-                    <div class="footer-left">
-                        <span class="motif footer-motif" aria-hidden="true">◆</span>
-                        <span class="footer-company">Yellow Keep</span>
-                    </div>
-                    <div class="footer-right">
-                        <span class="footer-year">2026</span>
-                        <span class="motif footer-motif" aria-hidden="true">✧</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
     </main>
+
+    <!-- ═══ CONTACT [05] ═══ -->
+    <section class="contact" id="contact" aria-label="Contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number" aria-hidden="true">05</span>
+                <h2 class="section-title">Let's connect</h2>
+                <span class="section-rule" aria-hidden="true"></span>
+            </div>
+            <p class="contact-intro">Have a project in mind, or just want to talk systems?</p>
+            <div class="contact-links">
+                <a href="mailto:victor@yellowkeep.be" class="cta-btn cta-btn--primary">
+                    <span class="cta-brace" aria-hidden="true">{</span>
+                    <span class="cta-label">&nbsp;victor@yellowkeep.be&nbsp;</span>
+                    <span class="cta-brace" aria-hidden="true">}</span>
+                </a>
+                <a href="https://linkedin.com/in/clementvictor" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">
+                    <span class="cta-brace" aria-hidden="true">{</span>
+                    <span class="cta-label">&nbsp;linkedin&nbsp;</span>
+                    <span class="cta-brace" aria-hidden="true">}</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Castle spacer -->
+    <div class="castle-spacer" aria-hidden="true"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-brand">Yellow Keep</span>
+            <span class="footer-year">2026</span>
+        </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+
+    <script>
+    (function() {
+        'use strict';
+
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var isMobile = window.innerWidth <= 768;
+        var hasPointer = window.matchMedia('(pointer: fine)').matches;
+
+        var EASE = 'cubicBezier(0.19, 1, 0.22, 1)';
+
+        // ─── LENIS SMOOTH SCROLL ───
+        var lenis = new Lenis({
+            lerp: 0.1,
+            wheelMultiplier: 1,
+            gestureOrientation: 'vertical',
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Smooth anchor scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                var target = document.querySelector(href);
+                if (target) lenis.scrollTo(target, { offset: -80 });
+            });
+        });
+
+        // ─── SCROLL PROGRESS BAR ───
+        var scrollProgress = document.querySelector('.scroll-progress');
+
+        // ─── SCROLL-DRIVEN EFFECTS ───
+        var heroSymbol = document.querySelector('.hero-divider-symbol');
+        lenis.on('scroll', function() {
+            var scrollY = window.scrollY || document.documentElement.scrollTop;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            // Progress bar
+            if (scrollProgress && docHeight > 0) {
+                scrollProgress.style.transform = 'scaleX(' + (scrollY / docHeight) + ')';
+            }
+
+            // Hero symbol rotation
+            if (heroSymbol && !prefersReducedMotion) {
+                var progress = Math.min(scrollY / window.innerHeight, 1);
+                heroSymbol.style.transform = 'rotate(' + (progress * 180) + 'deg)';
+                heroSymbol.style.opacity = 1 - progress * 0.6;
+            }
+        });
+
+        // ─── REDUCED MOTION: skip all animations ───
+        if (prefersReducedMotion) return;
+
+        // ─── ANIME.JS SETUP ───
+        var a = window.anime;
+        if (!a) { console.warn('anime.js not loaded'); return; }
+
+        // ─── LETTER SHUFFLE REVEAL ───
+        function shuffleReveal(element, delay) {
+            var text = element.dataset.text;
+            if (!text) return;
+            var chars = text.split('');
+            var randomPool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*!?';
+
+            element.textContent = '';
+            chars.forEach(function(char) {
+                var span = document.createElement('span');
+                span.className = 'shuffle-char';
+                span.textContent = char;
+                span.style.opacity = '0';
+                element.appendChild(span);
+            });
+
+            var spans = element.querySelectorAll('.shuffle-char');
+            spans.forEach(function(span, i) {
+                var finalChar = chars[i];
+                var charDelay = delay + i * 60;
+                var shuffleDuration = 350 + Math.random() * 200;
+
+                setTimeout(function() {
+                    span.style.opacity = '1';
+                    var startTime = Date.now();
+                    function tick() {
+                        if (Date.now() - startTime < shuffleDuration) {
+                            span.textContent = randomPool[Math.floor(Math.random() * randomPool.length)];
+                            requestAnimationFrame(tick);
+                        } else {
+                            span.textContent = finalChar;
+                        }
+                    }
+                    requestAnimationFrame(tick);
+                }, charDelay);
+            });
+        }
+
+        // ─── HERO ENTRANCE (immediate — no loader) ───
+        (function startHeroEntrance() {
+            var navEl = document.querySelector('.nav');
+            var heroNumber = document.querySelector('.hero-number');
+            var heroFirst = document.querySelector('.hero-first');
+            var heroLast = document.querySelector('.hero-last');
+            var heroTagline = document.querySelector('.hero-tagline');
+            var dividerLines = document.querySelectorAll('.hero-divider-line');
+            var dividerSymbol = document.querySelector('.hero-divider-symbol');
+            var metaItems = document.querySelectorAll('.hero-meta-item');
+            var ctaBtns = document.querySelectorAll('.hero-cta .cta-btn');
+
+            if (navEl) { navEl.style.opacity = '0'; navEl.style.transform = 'translateY(-20px)'; }
+            if (heroNumber) heroNumber.style.opacity = '0';
+            if (heroFirst) heroFirst.style.opacity = '0';
+            if (heroLast) heroLast.style.opacity = '0';
+            if (heroTagline) { heroTagline.style.opacity = '0'; heroTagline.style.transform = 'translateY(15px)'; }
+            if (dividerSymbol) dividerSymbol.style.opacity = '0';
+            dividerLines.forEach(function(l) { l.style.transform = 'scaleX(0)'; });
+            metaItems.forEach(function(m) { m.style.opacity = '0'; m.style.transform = 'translateX(20px)'; });
+            ctaBtns.forEach(function(b) { b.style.opacity = '0'; b.style.transform = 'translateX(20px)'; });
+
+            var tl = a.createTimeline({ defaults: { ease: EASE } });
+
+            tl.add(navEl, { opacity: [0, 1], translateY: [-20, 0], duration: 700 }, 100);
+            tl.add(heroNumber, { opacity: [0, 1], duration: 500 }, 150);
+            tl.add(heroFirst, { opacity: [0, 1], duration: 100 }, 250);
+            tl.add(dividerLines, { scaleX: [0, 1], duration: 700 }, 500);
+            tl.add(dividerSymbol, { opacity: [0, 1], duration: 400 }, 600);
+            tl.add(heroLast, { opacity: [0, 1], duration: 100 }, 700);
+            tl.add(heroTagline, { opacity: [0, 1], translateY: [15, 0], duration: 600 }, 1000);
+            tl.add(metaItems, { opacity: [0, 1], translateX: [20, 0], duration: 500, delay: a.stagger(80) }, 1200);
+            tl.add(ctaBtns, { opacity: [0, 1], translateX: [20, 0], duration: 500, delay: a.stagger(120) }, 1400);
+
+            setTimeout(function() { shuffleReveal(heroFirst, 0); }, 250);
+            setTimeout(function() { shuffleReveal(heroLast, 0); }, 700);
+        })();
+
+        // ─── CURSOR ACCENT (desktop only) ───
+        if (!isMobile && hasPointer) {
+            var cursor = document.querySelector('.cursor-circle');
+            cursor.style.display = 'block';
+
+            var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+            var cx = mx, cy = my;
+
+            window.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; });
+
+            function updateCursor() {
+                cx += (mx - cx) * 0.12;
+                cy += (my - cy) * 0.12;
+                cursor.style.left = cx + 'px';
+                cursor.style.top = cy + 'px';
+                requestAnimationFrame(updateCursor);
+            }
+            requestAnimationFrame(updateCursor);
+
+            document.querySelectorAll('a, button').forEach(function(el) {
+                el.addEventListener('mouseenter', function() { cursor.classList.add('is-hovering'); });
+                el.addEventListener('mouseleave', function() { cursor.classList.remove('is-hovering'); });
+            });
+
+            document.querySelectorAll('.work-card').forEach(function(el) {
+                el.addEventListener('mouseenter', function() { cursor.classList.add('is-hovering-card'); });
+                el.addEventListener('mouseleave', function() { cursor.classList.remove('is-hovering-card'); });
+            });
+
+            // Magnetic effect
+            document.querySelectorAll('.nav-link, .cta-btn').forEach(function(el) {
+                el.style.transition = 'transform 0.5s cubic-bezier(0.19, 1, 0.22, 1)';
+                el.addEventListener('mousemove', function(e) {
+                    var r = el.getBoundingClientRect();
+                    var dx = e.clientX - (r.left + r.width / 2);
+                    var dy = e.clientY - (r.top + r.height / 2);
+                    el.style.transform = 'translate(' + (dx * 0.12) + 'px,' + (dy * 0.12) + 'px)';
+                });
+                el.addEventListener('mouseleave', function() { el.style.transform = 'translate(0,0)'; });
+            });
+        }
+
+        // ─── SECTION TITLE REVEALS ───
+        document.querySelectorAll('.section-rule').forEach(function(rule) {
+            rule.style.width = '120px';
+            rule.style.transform = 'scaleX(0)';
+        });
+
+        document.querySelectorAll('.section-title').forEach(function(title) {
+            title.style.opacity = '0';
+            title.style.transform = 'translateY(40px)';
+
+            var header = title.closest('.section-header');
+            var number = header ? header.querySelector('.section-number') : null;
+            var rule = header ? header.querySelector('.section-rule') : null;
+
+            var obs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        if (number) a.animate(number, { opacity: [0, 1], duration: 700, ease: EASE });
+                        a.animate(title, { opacity: [0, 1], translateY: [40, 0], duration: 900, ease: EASE });
+                        if (rule) a.animate(rule, { scaleX: [0, 1], duration: 800, ease: EASE });
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '-60px 0px' });
+            obs.observe(title);
+        });
+
+        document.querySelectorAll('.section-number').forEach(function(num) {
+            if (!num.closest('.hero')) num.style.opacity = '0';
+        });
+
+        // ─── ABOUT REVEALS ───
+        var aboutLead = document.querySelector('.about-lead');
+        var aboutBody = document.querySelector('.about-body');
+        var techTags = document.querySelectorAll('.tech-tag');
+        var aboutStatEls = document.querySelectorAll('.about-stat');
+
+        if (aboutLead) { aboutLead.style.opacity = '0'; aboutLead.style.transform = 'translateY(25px)'; }
+        if (aboutBody) { aboutBody.style.opacity = '0'; aboutBody.style.transform = 'translateY(25px)'; }
+        techTags.forEach(function(t) { t.style.opacity = '0'; t.style.transform = 'translateY(10px)'; });
+        aboutStatEls.forEach(function(s) { s.style.opacity = '0'; s.style.transform = 'translateX(20px)'; });
+
+        var aboutObs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    if (aboutLead) a.animate(aboutLead, { opacity: [0,1], translateY: [25,0], duration: 800, ease: EASE });
+                    if (aboutBody) a.animate(aboutBody, { opacity: [0,1], translateY: [25,0], duration: 800, delay: 150, ease: EASE });
+                    if (techTags.length) a.animate(techTags, { opacity: [0,1], translateY: [10,0], duration: 400, delay: a.stagger(40), ease: EASE });
+                    if (aboutStatEls.length) a.animate(aboutStatEls, { opacity: [0,1], translateX: [20,0], duration: 600, delay: a.stagger(80), ease: EASE });
+                    aboutObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '-60px 0px' });
+        var aboutSection = document.querySelector('.about');
+        if (aboutSection) aboutObs.observe(aboutSection);
+
+        // ─── WORK CARD REVEALS ───
+        var workCards = document.querySelectorAll('.work-card');
+        workCards.forEach(function(c) { c.style.opacity = '0'; c.style.transform = 'translateY(40px)'; });
+
+        var workObs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    a.animate(workCards, {
+                        opacity: [0, 1],
+                        translateY: [40, 0],
+                        duration: 800,
+                        delay: a.stagger(150),
+                        ease: EASE
+                    });
+                    workObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05, rootMargin: '-40px 0px' });
+        var workSection = document.querySelector('.work');
+        if (workSection) workObs.observe(workSection);
+
+        // ─── APPROACH CASCADE ───
+        var approachItems = document.querySelectorAll('.approach-item');
+        approachItems.forEach(function(i) { i.style.opacity = '0'; i.style.transform = 'translateY(30px)'; });
+
+        var approachObs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    a.animate(approachItems, {
+                        opacity: [0, 1],
+                        translateY: [30, 0],
+                        duration: 700,
+                        delay: a.stagger(100),
+                        ease: EASE
+                    });
+                    approachObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '-60px 0px' });
+        var approachList = document.querySelector('.approach-list');
+        if (approachList) approachObs.observe(approachList);
+
+        // ─── CONTACT REVEAL ───
+        var contactIntro = document.querySelector('.contact-intro');
+        var contactBtns = document.querySelectorAll('.contact-links .cta-btn');
+        if (contactIntro) { contactIntro.style.opacity = '0'; contactIntro.style.transform = 'translateY(20px)'; }
+        contactBtns.forEach(function(b) { b.style.opacity = '0'; b.style.transform = 'translateY(20px)'; });
+
+        var contactObs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    if (contactIntro) a.animate(contactIntro, { opacity: [0,1], translateY: [20,0], duration: 700, ease: EASE });
+                    if (contactBtns.length) a.animate(contactBtns, { opacity: [0,1], translateY: [20,0], duration: 600, delay: a.stagger(120), ease: EASE });
+                    contactObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '-60px 0px' });
+        var contactSection = document.querySelector('.contact');
+        if (contactSection) contactObs.observe(contactSection);
+
+        // ─── ASCII CASTLE — CHARACTER RAIN + AMBIENT FLICKER ───
+        var castleEl = document.getElementById('asciiCastle');
+        var castleStarted = false;
+
+        function wrapCastleChars(el) {
+            var text = el.textContent;
+            el.textContent = '';
+            var spans = [];
+            for (var i = 0; i < text.length; i++) {
+                var ch = text[i];
+                if (ch === '\n') {
+                    el.appendChild(document.createTextNode('\n'));
+                } else if (ch === ' ') {
+                    el.appendChild(document.createTextNode(' '));
+                } else {
+                    var span = document.createElement('span');
+                    span.className = 'castle-char';
+                    span.textContent = ch;
+                    span.dataset.original = ch;
+                    span.style.opacity = '0';
+                    el.appendChild(span);
+                    spans.push(span);
+                }
+            }
+            return spans;
+        }
+
+        function startCastleAmbient(chars) {
+            var glyphs = '|/\\-_~`.,:;!*#';
+            function flicker() {
+                var count = 2 + Math.floor(Math.random() * 2);
+                for (var i = 0; i < count; i++) {
+                    var idx = Math.floor(Math.random() * chars.length);
+                    var span = chars[idx];
+                    var original = span.dataset.original;
+                    span.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+                    (function(s, o) {
+                        setTimeout(function() { s.textContent = o; }, 200 + Math.random() * 300);
+                    })(span, original);
+                }
+                setTimeout(flicker, 3000 + Math.random() * 4000);
+            }
+            setTimeout(flicker, 2000);
+        }
+
+        if (castleEl) {
+            castleEl.style.visibility = 'hidden';
+            if (isMobile) {
+                castleEl.style.visibility = 'visible';
+            } else {
+                var castleObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !castleStarted) {
+                            castleStarted = true;
+                            castleEl.style.visibility = 'visible';
+                            var chars = wrapCastleChars(castleEl);
+                            // Shuffle for rain effect
+                            for (var j = chars.length - 1; j > 0; j--) {
+                                var k = Math.floor(Math.random() * (j + 1));
+                                var tmp = chars[j]; chars[j] = chars[k]; chars[k] = tmp;
+                            }
+                            a.animate(chars, {
+                                translateY: function() { return [-(300 + Math.random() * 400), 0]; },
+                                opacity: [0, 1],
+                                duration: function() { return 2000 + Math.random() * 1500; },
+                                delay: a.stagger(150),
+                                ease: 'inQuad'
+                            });
+                            // Start ambient flicker after rain settles
+                            var rainDuration = chars.length * 150 + 3500;
+                            setTimeout(function() { startCastleAmbient(chars); }, rainDuration);
+                            castleObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                var approachSectionEl = document.querySelector('.approach');
+                if (approachSectionEl) castleObserver.observe(approachSectionEl);
+            }
+        }
+
+    })();
+    </script>
 
 </body>
 </html>

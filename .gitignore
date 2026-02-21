@@ -17,3 +17,9 @@ Thumbs.db
 
 # Test screenshots
 *.png
+
+# Fonts (paid license — not for public distribution)
+fonts/
+
+# Archive (old versions, experiments)
+archive/
